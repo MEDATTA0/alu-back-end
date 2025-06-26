@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 
-"""
-    This module downloads from an api (jsonplaceholder api) and prints the data.
-"""
+"""This module downloads from an api (jsonplaceholder api) and prints the data."""
 
 import requests
 import sys
