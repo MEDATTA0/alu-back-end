@@ -19,14 +19,20 @@ if __name__ == "__main__":
 
     filename = f"{employer_number}.csv"
     with open(filename, "w", newline="") as file:
-        fieldnames = ["USER_ID", "USERNAME",
-                      "TASK_COMPLETED_STATUS", "TASK_TITLE"]
-        writer = csv.DictWriter(file, fieldnames)
-        writer.writeheader()
+        # fieldnames = ["USER_ID", "USERNAME",
+        #               "TASK_COMPLETED_STATUS", "TASK_TITLE"]
+        # writer = csv.DictWriter(file, fieldnames)
+        # writer.writeheader()
+        # for todo in todo_json:
+        #     writer.writerow({
+        #         "USER_ID": employer_number,
+        #         "USERNAME": username,
+        #         "TASK_COMPLETED_STATUS": todo["completed"],
+        #         "TASK_TITLE": todo["title"]
+        #     })
         for todo in todo_json:
-            writer.writerow({
-                "USER_ID": employer_number,
-                "USERNAME": username,
-                "TASK_COMPLETED_STATUS": todo["completed"],
-                "TASK_TITLE": todo["title"]
-            })
+            file.write('"' + str(employer_number) + '",' +
+                       '"' + str(username) + '",' +
+                       '"' + str(todo['completed']) + '",' +
+                       '"' + str(todo['title']) + '",' + '\n'
+                       )
