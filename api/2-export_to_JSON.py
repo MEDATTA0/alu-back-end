@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
+import json
 import requests
 import sys
-import json
 
 """This module downloads from an api (jsonplaceholder api) and stores it in a json file"""
 
