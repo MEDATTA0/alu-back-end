@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-"""This module downloads from an api (jsonplaceholder api) and stores it in a csv file"""
+"""This module downloads from an api (jsonplaceholder api)
+and stores it in a csv file"""
 import csv
 import sys
 import requests
