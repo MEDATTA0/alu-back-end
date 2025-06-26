@@ -3,8 +3,8 @@
 """This module downloads from an api (jsonplaceholder api)
 and stores it in a csv file"""
 import csv
-import sys
 import requests
+import sys
 
 if __name__ == "__main__":
     employer_number = sys.argv[1]
