@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 
-"""This module downloads from an api (jsonplaceholder api) and prints the data."""
+"""This module downloads from an API (JSONPlaceholder) and prints the data."""
+
 import requests
 import sys
 
-
 if __name__ == "__main__":
-    """This module downloads from an api (jsonplaceholder api) and prints the data."""
     employer_number = sys.argv[1]
     raw_user_data = requests.get(
         f"https://jsonplaceholder.typicode.com/users?id={employer_number}")
@@ -25,8 +24,8 @@ if __name__ == "__main__":
         sys.exit(1)
 
     user_name = user_json[0]["name"]
-    todo_done = [x for x in todo_json if x['completed'] == True]
+    todo_done = [x for x in todo_json if x['completed'] is True]
     print(
         f"Employee {user_name} is done with tasks({len(todo_done)}/{len(todo_json)}):")
     for todo in todo_done:
-        print(f"\t {todo["title"]}")
+        print(f"\t {todo['title']}")
