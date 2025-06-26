@@ -26,7 +26,6 @@ if __name__ == "__main__":
     user_name = user_json[0]["name"]
     todo_done = [x for x in todo_json if x['completed'] is True]
     print(
-        f"""Employee {user_name} is done with tasks(
-        {len(todo_done)}/{len(todo_json)}):""")
+        f"Employee {user_name} is done with tasks({len(todo_done)}/{len(todo_json)}):")
     for todo in todo_done:
         print(f"\t {todo['title']}")
