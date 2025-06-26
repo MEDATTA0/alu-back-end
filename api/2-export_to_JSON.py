@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 
+"""This module downloads from an api (jsonplaceholder api) and stores it in a json file"""
 import json
 import requests
 import sys
 
-"""This module downloads from an api (jsonplaceholder api) and stores it in a json file"""
 
 if __name__ == "__main__":
-    """This module downloads from an api (jsonplaceholder api) and stores it in a json file"""
     employer_number = sys.argv[1]
     raw_user_data = requests.get(
         f"https://jsonplaceholder.typicode.com/users?id={employer_number}")
