@@ -2,6 +2,7 @@
 
 """This module downloads from an API (JSONPlaceholder) and prints the data."""
 
+import json
 import requests
 import sys
 
@@ -28,4 +29,6 @@ if __name__ == "__main__":
             for todo in todo_json if todo['userId'] == user['id']
         ]
         todos.setdefault(str(user['id']), user_todos)
-    print(todos)
+
+    with open("todo_all_employees.json", "w", newline="") as json_file:
+        json.dump(todos, json_file, indent=4)
