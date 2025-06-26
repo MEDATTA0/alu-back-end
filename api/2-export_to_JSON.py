@@ -17,7 +17,11 @@ if __name__ == "__main__":
 
     username = user_json[0]["username"]
     formatted_json = {employer_number: [
-        {"task": todo["title"], "completed": todo["completed"], "username": username} for todo in todo_json]}
+        {
+            "task": todo["title"],
+            "completed": todo["completed"],
+            "username": username
+        } for todo in todo_json]}
     filename = f"{employer_number}.json"
     with open(filename, "w", newline="") as file:
         json.dump(formatted_json, file, indent=4)
